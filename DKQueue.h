@@ -1,9 +1,8 @@
 //
 //  DKQueue.h
-//  ProCalc
 //
 //  Created by Dominik Krejčík on 25/09/2011.
-//  Copyright 2011 Gymnázium Ledeč nad Sázavou. All rights reserved.
+//  Feel free to use and distribute as long as you mention me. Or buy me a beer.
 //
 
 #import <Foundation/Foundation.h>
