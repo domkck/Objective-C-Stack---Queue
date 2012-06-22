@@ -9,37 +9,44 @@
 
 @implementation DKStack
 
-- (id)init
+-(id)init
 {
-    self = [super init];
-    if (self) {
-        array = [[NSMutableArray alloc] init];
-    }
-    
-    return self;
+	if ( (self = [super init]) ) {
+		array = [[NSMutableArray alloc] init];
+	}
+
+	return self;
 }
 
-- (void)pop {
-    [array removeLastObject];
+-(id)pop 
+{
+	id object = [self peek];
+	[array removeLastObject];
+	return object;
 }
 
-- (void)push:(id)element {
+-(void)push:(id)element 
+{
     [array addObject:element];
 }
 
-- (id)top {
+-(id)peek 
+{
     return [array lastObject];
 }
 
-- (NSInteger)size {
+-(NSInteger)size 
+{
     return [array count];
 }
 
-- (BOOL)isEmpty {
+-(BOOL)isEmpty 
+{
     return [array count] == 0;
 }
 
-- (void)clear {
+-(void)clear 
+{
     [array removeAllObjects];
 }
 
