@@ -11,12 +11,12 @@
     NSMutableArray* array;
 }
 
-- (void)pop;
-- (void)push:(id)element;
-- (void)clear;
+-(id)dequeue;
+-(void)enqueue:(id)element;
+-(void)clear;
 
-- (id)front;
-- (BOOL)isEmpty;
-- (NSInteger)size;
+-(id)peek;
+-(BOOL)isEmpty;
+-(NSInteger)size;
 
 @end
