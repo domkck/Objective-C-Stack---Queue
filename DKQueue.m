@@ -9,40 +9,51 @@
 
 @implementation DKQueue
 
-- (id)init
+-(id)init
 {
-    self = [super init];
-    if (self) {
+    if ( (self = [super init]) ) {
         array = [[NSMutableArray alloc] init];
     }
     
     return self;
 }
 
-- (void)pop {
-    if ([array count] > 0)
+-(id)dequeue 
+{
+    if ([array count] > 0) {
+		id object = [self peek];
         [array removeObjectAtIndex:0];
+		return object;
+	}
+	
+	return nil;
 }
 
-- (void)push:(id)element {
+-(void)enqueue:(id)element
+{
     [array addObject:element];
 }
 
-- (id)front {
+-(id)peek 
+{
     if ([array count] > 0)
         return [array objectAtIndex:0];
+	
     return nil;
 }
 
-- (NSInteger)size {
+-(NSInteger)size 
+{
     return [array count];
 }
 
-- (BOOL)isEmpty {
+-(BOOL)isEmpty 
+{
     return [array count] == 0;
 }
 
-- (void)clear {
+-(void)clear 
+{
     [array removeAllObjects];
 }
 
