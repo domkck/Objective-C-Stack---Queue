@@ -30,6 +30,11 @@
     [array addObject:element];
 }
 
+-(void)pushElementsFromArray:(NSArray*)arr
+{
+    [array addObjectsFromArray:arr];
+}
+
 -(id)peek 
 {
     return [array lastObject];

@@ -34,6 +34,18 @@
     [array addObject:element];
 }
 
+-(void)enqueueElementsFromArray:(NSArray*)arr 
+{
+    [array addObjectsFromArray:arr];
+}
+
+-(void)enqueueElementsFromQueue:(DKQueue*)queue
+{
+    while (![queue isEmpty]) {
+        [self enqueue:[queue dequeue]];
+    }
+}
+
 -(id)peek 
 {
     if ([array count] > 0)

@@ -17,6 +17,7 @@
 // Adds the element to the top of the stack
 -(void)push:(id)element;
 // Removes all elements
+-(void)pushElementsFromArray:(NSArray*)arr;
 -(void)clear;
 
 // Returns the object at the top of the stack

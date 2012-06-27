@@ -17,6 +17,8 @@
 // Add the element to the back of the queue
 -(void)enqueue:(id)element;
 // Remove all elements
+-(void)enqueueElementsFromArray:(NSArray*)arr;
+-(void)enqueueElementsFromQueue:(DKQueue*)queue;
 -(void)clear;
 
 // Returns the element at the front of the queue
