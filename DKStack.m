@@ -1,8 +1,8 @@
 //
 //  DKStack.m
 //
-//  Created by Dominik Krejčík on 25/09/2011.
 //  Feel free to use and distribute as long as you mention me. Or buy me a beer.
+//  Created by Dominik Krejčík on 25/09/2011.
 //
 
 #import "DKStack.h"
@@ -53,6 +53,11 @@
 -(void)clear 
 {
     [array removeAllObjects];
+}
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(id __unsafe_unretained [])buffer count:(NSUInteger)len;
+{
+    return [array countByEnumeratingWithState:state objects:buffer count:len];
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface DKStack : NSObject {
+@interface DKStack : NSObject <NSFastEnumeration> {
     NSMutableArray* array;
 }
 
